@@ -103,6 +103,7 @@ else
                 --config-dir $dir/info --blocklist --encryption-preferred \
                 --auth --dht --foreground --log-error -e /dev/stdout \
                 --download-dir $dir/downloads --incomplete-dir $dir/incomplete \
-                --username '${TRUSER:-admin}' --password '${TRPASSWD:-admin}' \
+                $([ -z "$TRUSER"] && echo "" || echo "--username $TRUSER") \
+                $([ -z "$TRPASSWD"] && echo "" || echo "--password $TRPASSWD") \
                 --no-portmap --allowed \\* 2>&1"
 fi

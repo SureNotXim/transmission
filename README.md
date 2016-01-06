@@ -2,8 +2,6 @@
 
 This is a fork of github.com/dperson/transmission with a simple change for my use case (alow modification of settings.json). All credits to dperson and the team maintaining this image.
 
-Supports docker stop and start.
-
 > Usage:
 > docker pull surenot/transmission
 > docker run -d surenot/transmission -p 9091:9091 \
